@@ -35,7 +35,7 @@ def interaction(user_profile):
 
     print("\nLet's get started. Type Q or q to quit anytime.")
     print("BOT 101: " + random.choice(bots[bot_type]["greetings"]).format(username))
-    print("Possible response: Hello back | Ask 'How are you?'")
+    print("Possible responses: Hello back | Ask 'How are you?'")
 
     user_input = input("YOU: ").strip()
     while user_input.capitalize() != "Q":
@@ -50,7 +50,12 @@ def response_matching(message):
             phrase_regex = re.compile(regex)
             match = phrase_regex.search(message)
             if match is not None:
-                return question_type
+                try:
+                    print(f"BOT 101: {match.group('object').title()}?")
+                except IndexError:
+                    continue
+                finally:
+                    return question_type
 
     return "questions"
 
