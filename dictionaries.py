@@ -17,7 +17,7 @@ bots = {"cheerful": {"greetings": ["Hello {}! Bot 101, at your service!",
                                     "I am so happy! We have the same interest!"],
                      "relevant_response_required": ["So you like that? So cool!",
                                                     "Really? Wow @@"
-                                                    "Truth is, that's not my cup of tea. "
+                                                    "That's not my cup of tea. "
                                                     "But if you like it, then you rock!"]},
         "cranky": {"greetings": ["Hello {}. I am Bot 101. Nice to meet you.",
                                  "My pleasure to meet you, {}."],
@@ -33,12 +33,12 @@ bots = {"cheerful": {"greetings": ["Hello {}! Bot 101, at your service!",
                                      "So you don't like it? Thanks for letting me know"],
                    "agreements": ["So you also have good taste like me then.",
                                   "Hmm. Looks like we have the same interest!"],
-                   "relevant_response_required": ["So you like that, huh?",
-                                                  "Oh? Interesting."
+                   "relevant_response_required": ["So you like that, huh? Interesting.",
+                                                  "I also like it.",
                                                   "Truth is, I don't really like that. "
                                                   "But I'm just a bot, so... You do you."]}}
 
-valid_phrase = {"feelings": [r"[Hh]ow are you"],
-                "disagreements": [r"[Nn]ah|[Nn]o"],
-                "agreements": [r"[Yy]eah|[Yy]es|[Yy]a", r"[Ss]ure"],
-                "relevant_response_required": [r"[Ii] [like|love]+ (?P<object>.*)"]}
+valid_phrase = {"feelings": [r"how are you"],
+                "disagreements": [r"(nah|no)(?!\w)", r"don'?t(?!\w)"],
+                "agreements": [r"(yeah|yes|ya)(?!\w)", r"(sure)(?!\w)"],
+                "relevant_response_required": [r"i [like|love]+ (?P<object>.*)"]}

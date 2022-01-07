@@ -48,7 +48,7 @@ def response_matching(message):
     for question_type, matched_phrases in valid_phrase.items():
         for regex in matched_phrases:
             phrase_regex = re.compile(regex)
-            match = phrase_regex.search(message)
+            match = phrase_regex.search(message.lower())
             if match is not None:
                 try:
                     print(f"BOT 101: {match.group('object').title()}?")
