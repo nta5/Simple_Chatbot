@@ -8,7 +8,7 @@ bots = {"cheerful": {"greetings": ["Hello {}! Bot 101, at your service!",
                      "questions": ["Hey, what do you like doing in your free time?\n"
                                    "Possible response: 'I like (something)'.",
                                    "Do you like shopping online? I like it a lot!",
-                                   "Do you like me, {}?",
+                                   "I have been taking up baking lately. Do you like baking, {}?",
                                    "Do you like soccer?", "{}, do you like reading?"],
                      "disagreements": ["Aww, too bad :(",
                                        "No? What a shame :3",
@@ -16,7 +16,7 @@ bots = {"cheerful": {"greetings": ["Hello {}! Bot 101, at your service!",
                      "agreements": ["So you like it too? Good to know!",
                                     "I am so happy! We have the same interest!"],
                      "relevant_response_required": ["So you like that? So cool!",
-                                                    "Really? Wow @@"
+                                                    "Really? Wow @@",
                                                     "That's not my cup of tea. "
                                                     "But if you like it, then you rock!"]},
         "cranky": {"greetings": ["Hello {}. I am Bot 101. Nice to meet you.",
@@ -30,13 +30,13 @@ bots = {"cheerful": {"greetings": ["Hello {}! Bot 101, at your service!",
                                  "Do you like reading by any chance?"],
                    "disagreements": ["No? What a shame.",
                                      "How can you not like it???",
-                                     "So you don't like it? Thanks for letting me know"],
+                                     "So you don't like it? Thanks for letting me know."],
                    "agreements": ["So you also have good taste like me then.",
                                   "Hmm. Looks like we have the same interest!"],
                    "relevant_response_required": ["So you like that, huh? Interesting.",
                                                   "I also like it.",
                                                   "Truth is, I don't really like that. "
-                                                  "But I'm just a bot, so... You do you."]}}
+                                                  "But you do you."]}}
 
 valid_phrase = {"feelings": [r"how are you"],
                 "disagreements": [r"(nah|no)(?!\w)", r"don'?t(?!\w)"],
